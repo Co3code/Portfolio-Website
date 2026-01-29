@@ -67,29 +67,28 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_r2i0by4",
-        "template_mf5x3bh",
+        "service_fg2xt54", 
+        "template_pgcdc0o", 
         {
           from_name: form.name,
-          to_name: "Lohit Kolluri",
+          to_name: "TchLian",
           from_email: form.email,
-          to_email: "lohitkolluri@gmail.com",
+          to_email: "anthonycountian7@gmail.com",
           message: form.message,
         },
-        "p-gXzzyvEhPaJ0XA-"
+        "Ewf22_Rg1neyNIJoE", //  Public Key
       )
-      .then(
-        () => {
-          setLoading(false);
-          setConfirmation("Thank you! I will get back to you as soon as possible.");
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        }
-      )
+      .then(() => {
+        setLoading(false);
+        setConfirmation("Thank you! I will get back to you as soon as possible.");
+
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
       .catch((error) => {
         setLoading(false);
         console.error(error);

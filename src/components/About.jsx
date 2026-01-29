@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import { Tilt } from 'react-tilt';
-import { services } from '../constants';
-import { SectionWrapper } from '../hoc';
-import { styles } from '../styles';
-import { fadeIn, textVariant } from '../utils/motion';
+import { motion } from "framer-motion";
+import React from "react";
+import { Tilt } from "react-tilt";
+import { services } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div
@@ -36,15 +36,11 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I am a Computer Science student at SRM University and multilingual speaker with a passion
-        for ethical hacking, artificial intelligence, and neural language processing. I am looking
-        to join a company that values innovation, collaboration, and continuous learning and am
-        confident that my enthusiasm and drive will help me succeed in any role that leverages my
-        passion for technology.
+      <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+        I am an Information Technology student with a strong interest in computer systems, software development, and
+        problem-solving. I enjoy learning new technologies, working on hands-on projects, and continuously improving my
+        technical skills. I am looking to be part of an organization that values learning, collaboration, and growth,
+        where I can apply my knowledge and further develop as an IT professional.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
@@ -56,6 +52,6 @@ const About = () => {
   );
 };
 
-const WrappedAbout = SectionWrapper(About, 'about');
+const WrappedAbout = SectionWrapper(About, "about");
 
 export default WrappedAbout;

@@ -1,5 +1,6 @@
 import {
-  c,
+ 
+  php,
   python,
   java,
   cpp,
@@ -16,10 +17,9 @@ import {
   payloadmaster,
   threejs,
   mhft,
-  sketcher,
   mathwork,
-  CompileVortex,
   eduskill,
+  MySQL,
 } from "../assets";
 
 export const navLinks = [
@@ -38,10 +38,12 @@ export const navLinks = [
 ];
 
 export const services = [
-  { title: "C", icon: c },
-  { title: "C++", icon: cpp },
   { title: "Python", icon: python },
   { title: "Java", icon: java },
+  { title: "php", icon: php },
+  { title: "MySQL", icon: MySQL },
+  { title: "javascript", icon: javascript },
+  
 ];
 
 export const technologies = [
@@ -129,42 +131,13 @@ export const projects = [
       { name: "Regression Algorithms", color: "pink-text-gradient" },
     ],
     image: mhft,
-    source_code_link:
-      "https://github.com/lohitkolluri/mental_health_fitness_tracker",
+    source_code_link: "https://github.com/lohitkolluri/mental_health_fitness_tracker",
   },
   {
     name: "PayloadMaster",
-    description:
-      "Tool to automate payload creation using the Metasploit framework",
-    tags: [
-      { name: "shell", color: "blue-text-gradient" },
-    ],
+    description: "Tool to automate payload creation using the Metasploit framework",
+    tags: [{ name: "shell", color: "blue-text-gradient" }],
     image: payloadmaster,
     source_code_link: "https://github.com/lohitkolluri/PayloadMaster",
-  },
-  {
-    name: "CompileVortex",
-    description:
-      "Tool to automate payload creation using the Metasploit framework",
-    tags: [
-      { name: "Javascript", color: "blue-text-gradient" },
-      { name: "CSS", color: "green-text-gradient" },
-      { name: "HTML", color: "pink-text-gradient" },
-    ],
-    image: CompileVortex,
-    source_code_link: "https://github.com/lohitkolluri/CompileVortex",
-  },
-  {
-    name: "Sketcher",
-    description:
-      "Convert an input image to a pencil sketch using OpenCV and Matplotlib libraries.",
-    tags: [
-      { name: "OpenCV", color: "blue-text-gradient" },
-      { name: "Matplotlib", color: "green-text-gradient" },
-      { name: "Python", color: "pink-text-gradient" },
-    ],
-
-    image: sketcher,
-    source_code_link: "https://github.com/lohitkolluri/Image_to_Pencil_Sketch_App",
   },
 ];
