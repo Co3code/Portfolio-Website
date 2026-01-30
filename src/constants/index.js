@@ -108,7 +108,7 @@ export const projects = [
       { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
     ],
     image: weatherpedia,
-    source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
+    source_code_link: "",
   },
   {
     name: "Terminal Like Portfolio Website",
@@ -120,7 +120,7 @@ export const projects = [
       { name: "Javascript", color: "pink-text-gradient" },
     ],
     image: termpw,
-    source_code_link: "https://github.com/lohitkolluri/lohitkolluri.github.io",
+    source_code_link: "",
   },
   {
     name: "Mental Health Fitness Tracker",
@@ -132,13 +132,13 @@ export const projects = [
       { name: "Regression Algorithms", color: "pink-text-gradient" },
     ],
     image: mhft,
-    source_code_link: "https://github.com/lohitkolluri/mental_health_fitness_tracker",
+    source_code_link: "",
   },
   {
     name: "PayloadMaster",
     description: "Tool to automate payload creation using the Metasploit framework",
     tags: [{ name: "shell", color: "blue-text-gradient" }],
     image: payloadmaster,
-    source_code_link: "https://github.com/lohitkolluri/PayloadMaster",
+    source_code_link: "",
   },
 ];
