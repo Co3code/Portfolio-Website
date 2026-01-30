@@ -33,6 +33,10 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "download", // Add this new part
+    title: "Download App",
+  },
 ];
 
 export const services = [

@@ -15,7 +15,8 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        <div>
+        {/* Added 'relative z-10' here to make sure the button is clickable */}
+        <div className="relative z-10">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915EFF]">TchLian</span>
           </h1>
@@ -32,8 +33,17 @@ const Hero = () => {
               }}
             />
           </p>
+
+          {/* --- UPDATED DOWNLOAD BUTTON --- 
+          <div className="mt-10 ">
+            <a href="/tchLian.apk" download="tchLian.apk">
+              <button className="bg-[#915eff] py-3 px-1 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:shadow-purple-500/50 transition-all cursor-pointer">
+                📲 Download My App (APK)
+              </button>
+            </a>
+          </div>*/}
         </div>
-      </div>
+      </div> 
 
       <ComputersCanvas />
 
@@ -53,7 +63,7 @@ const Hero = () => {
             />
           </div>
         </a>
-      </div>
+      </div> 
     </section>
   );
 };

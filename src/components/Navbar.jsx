@@ -26,7 +26,7 @@ const Navbar = () => {
   }, [toggle]);
 
   const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? "flex sm:hidden" : "hidden sm:flex"} flex-row gap-6`}>
+    <ul className={`list-none ${isSecondary ? "flex flex-col" : "hidden sm:flex"} flex-row gap-6`}>
       {navLinks.map((link) => (
         <li
           key={link.id}
@@ -40,7 +40,14 @@ const Navbar = () => {
             }
           }}
         >
-          <a href={`#${link.id}`}>{link.title}</a>
+          {/* LOGIC: If the ID is 'download', make it a download link. Otherwise, make it a scroll link. */}
+          {link.id === "download" ? (
+            <a href="/tchLian.apk" download="tchLian.apk">
+              {link.title}
+            </a>
+          ) : (
+            <a href={`#${link.id}`}>{link.title}</a>
+          )}
         </li>
       ))}
       <li
