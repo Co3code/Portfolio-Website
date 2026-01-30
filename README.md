@@ -47,7 +47,7 @@ mindmap
 
 ## 🚀 Demo
 
-Experience the live portfolio at [https://portfolio-lohit.vercel.app](https://portfolio-lohit.vercel.app)
+Experience the live portfolio at [https://portfolio-website-sable-delta-36.vercel.app](https://portfolio-website-sable-delta-36.vercel.app)
 
 ## 🛠️ Installation
 
@@ -105,19 +105,16 @@ npm run dev
 ## ⚡ Core Features
 
 - 📱 Responsive Design
-
   - Mobile-first approach
   - Seamless experience across all devices
   - Adaptive layouts and components
 
 - 🎯 Dynamic Content
-
   - Interactive project showcase
   - Engaging experience section
   - Animated skill representations
 
 - 🎨 Modern UI/UX
-
   - Smooth Framer Motion animations
   - Intuitive navigation
   - Clean and professional design
@@ -130,7 +127,8 @@ npm run dev
 
 <div align="center">
 
-MIT License © [Lohit Kolluri](LICENSE)
+MIT License © [Lohit Kolluri](LICENSE)··
+Customized and modified by **Anthony Co / TchLian**
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
 
