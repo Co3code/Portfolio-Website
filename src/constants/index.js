@@ -10,14 +10,13 @@ import {
   tailwind,
   nodejs,
   git,
-  edunet,
+  git2,
   weatherpedia,
   termpw,
   payloadmaster,
-  threejs,
   mhft,
-  mathwork,
-  eduskill,
+  web,
+  intro,
   MySQL,
 } from "../assets";
 
@@ -41,7 +40,6 @@ export const services = [
   { title: "javascript", icon: javascript },
   { title: "php", icon: php },
   { title: "MySQL", icon: MySQL },
- 
 ];
 
 export const technologies = [
@@ -51,7 +49,6 @@ export const technologies = [
   { name: "Rect JS", icon: reactjs },
   { name: "Tailwind CSS", icon: tailwind },
   { name: "Node JS", icon: nodejs },
-  { name: "Three JS", icon: threejs },
   { name: "git", icon: git },
 ];
 
@@ -59,7 +56,7 @@ export const experiences = [
   {
     title: "Frontend Developer (Student Projects)",
     company_name: "Personal & Academic Projects",
-    icon: eduskill,
+    icon: intro,
     iconBg: "#161329",
     date: "2024 - Present",
     points: [
@@ -72,7 +69,7 @@ export const experiences = [
   {
     title: "Web Development Learner",
     company_name: "Self-Taught / Online Resources",
-    icon: mathwork,
+    icon: web,
     iconBg: "#161329",
     date: "2023 - Present",
     points: [
@@ -84,7 +81,7 @@ export const experiences = [
   {
     title: "Version Control & Collaboration",
     company_name: "Git & GitHub",
-    icon: edunet,
+    icon: git2,
     iconBg: "#161329",
     date: "2023 - Present",
     points: [

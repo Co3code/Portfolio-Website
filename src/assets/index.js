@@ -1,7 +1,7 @@
 // Import company logos
-import mathwork from "./company/mathwork.png";
-import edunet from "./company/edunet.png";
-import eduskill from "./company/eduskill.png";
+import web from "./company/web.png";
+import git2 from "./company/git2.png";
+import intro from "./company/intro.png";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
@@ -25,7 +25,7 @@ import html from "./tech/html.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
-import threejs from "./tech/threejs.png";
+
 
 // Import common assets
 import logo from "./logo.png";
@@ -36,8 +36,8 @@ import close from "./close.svg";
 export {
   MySQL,
   php,
-  mathwork,
-  edunet,
+  web,
+  git2,
   python,
   c,
   cpp,
@@ -50,7 +50,6 @@ export {
   nodejs,
   reactjs,
   tailwind,
-  threejs,
   weatherpedia,
   termpw,
   payloadmaster,
@@ -58,5 +57,5 @@ export {
   logo,
   menu,
   close,
-  eduskill,
+  intro,
 };
