@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaFacebook } from "react-icons/fa"; // Import the icon
 import { Link } from "react-router-dom";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
@@ -9,7 +10,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const resumeUrl = "/Resume.pdf";
-  const hasResume = false; // set to true if you add a resume file
+  const hasResume = false;
 
   const toggleResume = () => {
     if (hasResume) {
@@ -26,7 +27,7 @@ const Navbar = () => {
   }, [toggle]);
 
   const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? "flex flex-col" : "hidden sm:flex"} flex-row gap-6`}>
+    <ul className={`list-none ${isSecondary ? "flex flex-col" : "hidden sm:flex"} flex-row gap-6 items-center`}>
       {navLinks.map((link) => (
         <li
           key={link.id}
@@ -40,7 +41,6 @@ const Navbar = () => {
             }
           }}
         >
-          {/* LOGIC: If the ID is 'download', make it a download link. Otherwise, make it a scroll link. */}
           {link.id === "download" ? (
             <a href="/tchLian.apk" download="tchLian.apk">
               {link.title}
@@ -50,12 +50,22 @@ const Navbar = () => {
           )}
         </li>
       ))}
+
       <li
-        className={`text-${
-          isSecondary ? "secondary" : "white"
-        } hover:text-white text-[20px] font-medium cursor-pointer`}
+        className={`text-${isSecondary ? "secondary" : "white"} hover:text-white text-[20px] font-medium cursor-pointer`}
       >
         <button onClick={toggleResume}>Resume</button>
+      </li>
+
+      {/* FACEBOOK ICON ADDED HERE */}
+      <li className="flex items-center">
+        <a
+          href="https://www.facebook.com/cy.yan.539259" 
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaFacebook size={24} className="text-[#915EFF] hover:text-white transition-all cursor-pointer" />
+        </a>
       </li>
     </ul>
   );
@@ -78,7 +88,9 @@ const Navbar = () => {
               <span className="sm:block hidden">Lian</span>
             </p>
           </Link>
+
           {renderNavLinks(false)}
+
           <div className="sm:hidden flex flex-1 justify-end items-center">
             <img
               src={toggle ? close : menu}
