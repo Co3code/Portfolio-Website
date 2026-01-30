@@ -108,7 +108,7 @@ export const projects = [
       { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
     ],
     image: weatherpedia,
-    source_code_link: "",
+   
   },
   {
     name: "Terminal Like Portfolio Website",
