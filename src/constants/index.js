@@ -1,5 +1,4 @@
 import {
- 
   php,
   python,
   java,
@@ -39,11 +38,10 @@ export const navLinks = [
 
 export const services = [
   { title: "Python", icon: python },
-  { title: "Java", icon: java },
+  { title: "javascript", icon: javascript },
   { title: "php", icon: php },
   { title: "MySQL", icon: MySQL },
-  { title: "javascript", icon: javascript },
-  
+ 
 ];
 
 export const technologies = [
@@ -59,38 +57,40 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "AI/ML Intern",
-    company_name: "EduSkill Foundation | AWS Academy | AICTE",
+    title: "Frontend Developer (Student Projects)",
+    company_name: "Personal & Academic Projects",
     icon: eduskill,
     iconBg: "#161329",
-    date: "Sep 2023 - Nov 2023",
+    date: "2024 - Present",
     points: [
-      "Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.",
-      "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
+      "Built responsive web interfaces using React, Vite, HTML, CSS, and JavaScript.",
+      "Created reusable components and maintained clean folder structures for scalability.",
+      "Practiced integrating libraries and tools to improve UI and functionality.",
+      "Used Git and GitHub for version control and project management.",
     ],
   },
   {
-    title: "Mathwork Ai Virtual Intern",
-    company_name: "Mathwork | AICTE",
+    title: "Web Development Learner",
+    company_name: "Self-Taught / Online Resources",
     icon: mathwork,
     iconBg: "#161329",
-    date: "May 2023 - Sep 2023",
+    date: "2023 - Present",
     points: [
-      "Completed virtual internship, gaining a strong foundation in MATLAB, including data analysis and processing.",
-      "Acquired practical skills in image and signal processing, including segmentation, batch processing, and spectral analysis.",
-      "Developed expertise in machine learning models for clustering, classification, and regression, and customized deep learning techniques for image classification.",
+      "Learning core web development concepts including JavaScript, React, and frontend tooling.",
+      "Practicing building small projects to strengthen coding and problem-solving skills.",
+      "Exploring basic backend concepts like APIs and authentication.",
     ],
   },
   {
-    title: "Artificial Intelligence Intern",
-    company_name: "Edunet Foundation | IBM SkillsBuild | AICTE",
+    title: "Version Control & Collaboration",
+    company_name: "Git & GitHub",
     icon: edunet,
     iconBg: "#161329",
-    date: "June 2023 - July 2023",
+    date: "2023 - Present",
     points: [
-      "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
-      "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
-      "Leveraged 12 regression algorithms to attain precise outcomes in analyzing and predicting mental fitness levels across 150+ countries.",
+      "Tracked project history and managed changes using Git.",
+      "Hosted projects on GitHub and practiced clean commit messages.",
+      "Learned branching, merging, and basic collaboration workflows.",
     ],
   },
 ];

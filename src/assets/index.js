@@ -7,10 +7,10 @@ import eduskill from "./company/eduskill.png";
 import python from "./tech-stack/python.png";
 import c from "./tech-stack/c.png";
 import cpp from "./tech-stack/cpp.png";
-import java from "./tech-stack/java.png";
+import javascript from "./tech-stack/javascript.png";
 import php from "./tech-stack/php.png";
 import MySQL from "./tech-stack/MySQL.png";
-import javascript from "./tech-stack/javascript.png";
+import java from "./tech-stack/java.png";
 
 // Import project images
 import weatherpedia from "./projects/WeatherPedia.png";
@@ -28,7 +28,7 @@ import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
 
 // Import common assets
-import logo from "./logo.jpg";
+import logo from "./logo.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
