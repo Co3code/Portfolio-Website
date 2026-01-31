@@ -48,12 +48,11 @@ const Navbar = () => {
           {/* This part handles the "Download" link if it exists in your constants */}
           {link.id === "download" ? (
             <a
-              href="https://github.com/Co3code/Portfolio-Website/releases/download/v1.0.0/tchLian.1.apk"
+              href="https://github.com/Co3code/Portfolio-Website/releases/download/v1.0.0/TchLian-v1.apk"
               target="_blank"
               rel="noopener noreferrer"
             >
               {link.title}
-
             </a>
           ) : (
             <a href={`#${link.id}`}>{link.title}</a>
