@@ -67,13 +67,11 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_fg2xt54", 
-        "template_pgcdc0o", 
+        "service_fg2xt54",
+        "template_pgcdc0o",
         {
-          from_name: form.name,
-          to_name: "TchLian",
-          from_email: form.email,
-          to_email: "anthonycountian7@gmail.com",
+          name: form.name, // matches {{name}} in your template
+          email: form.email, // matches {{email}} in your template
           message: form.message,
         },
         "Ewf22_Rg1neyNIJoE", //  Public Key
