@@ -47,9 +47,13 @@ const Navbar = () => {
         >
           {/* This part handles the "Download" link if it exists in your constants */}
           {link.id === "download" ? (
-            <a href="/tchLian.apk" download={isAndroid} target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/Co3code/Portfolio-Website/releases/download/v1.0.0/tchLian.1.apk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {link.title}
-              {!isAndroid && <span className="text-sm text-gray-400 ml-1">(Android only)</span>}
+
             </a>
           ) : (
             <a href={`#${link.id}`}>{link.title}</a>
