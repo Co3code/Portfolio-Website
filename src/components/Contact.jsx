@@ -70,8 +70,8 @@ const Contact = () => {
         "service_fg2xt54",
         "template_pgcdc0o",
         {
-          name: form.name, // matches {{name}} in your template
-          email: form.email, // matches {{email}} in your template
+          name: form.name, // matches {{name}} 
+          email: form.email, // matches {{email}} 
           message: form.message,
         },
         "Ewf22_Rg1neyNIJoE", //  Public Key
