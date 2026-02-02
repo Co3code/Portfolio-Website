@@ -134,11 +134,5 @@ export const projects = [
     image: mhft,
     source_code_link: "",
   },
-  {
-    name: "PayloadMaster",
-    description: "Tool to automate payload creation using the Metasploit framework",
-    tags: [{ name: "shell", color: "blue-text-gradient" }],
-    image: payloadmaster,
-    source_code_link: "",
-  },
+ 
 ];
