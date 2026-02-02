@@ -67,14 +67,14 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_fg2xt54",
-        "template_pgcdc0o",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-          name: form.name, // matches {{name}} 
-          email: form.email, // matches {{email}} 
+          name: form.name, // matches {{name}}
+          email: form.email, // matches {{email}}
           message: form.message,
         },
-        "Ewf22_Rg1neyNIJoE", //  Public Key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY, //  Public Key
       )
 
       .then(() => {
