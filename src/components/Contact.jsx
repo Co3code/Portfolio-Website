@@ -138,21 +138,44 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      {/* not final i will add the specific location here */}
-      <motion.div
-        variants={slideIn("up", "tween", 0.3, 1)}
-        className="w-full h-[450px] rounded-2xl overflow-hidden border-4 border-[#915EFF] mt-10"
-      >
-        <iframe
-          title="Christ the King College Gingoog"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.5137351631584!2d125.09459367501538!3d8.831514791222165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32ff3be0daf1c1c1%3A0xda15a15f4306db12!2sChrist%20the%20King%20College!5e0!3m2!1sen!2sph!4v1707085000000!5m2!1sen!2sph"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+      {/* Location Section */}
+      <motion.div variants={slideIn("up", "tween", 0.3, 1)} className="w-full mt-12">
+        <div className="bg-black-100 rounded-2xl p-6 border border-[#915EFF]/40 shadow-lg">
+          <h3 className="text-white text-2xl font-bold mb-2"> My Location</h3>
+          <p className="text-secondary mb-4">Christ the King College, Gingoog City</p>
+
+          <div className="relative w-full h-[400px] rounded-xl overflow-hidden group cursor-pointer">
+            {/* Map Preview (non-interactive iframe) */}
+            <iframe
+              title="Christ the King College Gingoog"
+              src="https://www.google.com/maps?q=Christ%20the%20King%20College%20Gingoog&output=embed"
+              className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 pointer-events-none"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+
+            {/* Click Anywhere Overlay */}
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Christ+the+King+College+Gingoog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 z-10"
+            />
+
+            {/* Search Button */}
+            <div className="absolute bottom-4 right-4 z-20">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Christ+the+King+College+Gingoog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#915EFF] text-white px-5 py-3 rounded-xl font-semibold shadow-lg hover:bg-purple-700 transition"
+              >
+                🔍 Search this area
+              </a>
+            </div>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
