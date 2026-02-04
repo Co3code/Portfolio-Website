@@ -141,40 +141,23 @@ const Contact = () => {
       {/* Location Section */}
       <motion.div variants={slideIn("up", "tween", 0.3, 1)} className="w-full mt-12">
         <div className="bg-black-100 rounded-2xl p-6 border border-[#915EFF]/40 shadow-lg">
-          <h3 className="text-white text-2xl font-bold mb-2"> My Location</h3>
+          <h3 className="text-white text-2xl font-bold mb-2">📍 My Location</h3>
           <p className="text-secondary mb-4">Christ the King College, Gingoog City</p>
 
-          <div className="relative w-full h-[400px] rounded-xl overflow-hidden group cursor-pointer">
-            {/* Map Preview (non-interactive iframe) */}
+          <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-inner border border-white/10">
+            {/* Interactive Google Map (RED PIN INCLUDED) */}
             <iframe
               title="Christ the King College Gingoog"
-              src="https://www.google.com/maps?q=Christ%20the%20King%20College%20Gingoog&output=embed"
-              className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 pointer-events-none"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.5669322978965!2d125.09956957399389!3d8.823358092176145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33002eeddbf145c1%3A0xfad5a15f4306db12!2sChrist%20the%20King%20College!5e1!3m2!1sen!2sph!4v1770219847885!5m2!1sen!2sph"
+              className="w-full h-full rounded-xl"
               style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-
-            {/* Click Anywhere Overlay */}
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Christ+the+King+College+Gingoog"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute inset-0 z-10"
-            />
-
-            {/* Search Button */}
-            <div className="absolute bottom-4 right-4 z-20">
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Christ+the+King+College+Gingoog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#915EFF] text-white px-5 py-3 rounded-xl font-semibold shadow-lg hover:bg-purple-700 transition"
-              >
-                🔍 Search this area
-              </a>
-            </div>
           </div>
+
+          <p className="text-secondary text-sm mt-3">Zoom, drag, and scan the area directly on the map.</p>
         </div>
       </motion.div>
     </div>
