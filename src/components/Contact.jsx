@@ -138,7 +138,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      {/* Specific Map: Christ the King College */}
+      {/* not final i will add the specific location here */}
       <motion.div
         variants={slideIn("up", "tween", 0.3, 1)}
         className="w-full h-[450px] rounded-2xl overflow-hidden border-4 border-[#915EFF] mt-10"
