@@ -36,10 +36,7 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({
-      ...form,
-      [name]: value,
-    });
+    setForm({ ...form, [name]: value });
   };
 
   const validateEmail = (email) => {
@@ -70,78 +67,92 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-          name: form.name, // matches {{name}}
-          email: form.email, // matches {{email}}
+          name: form.name,
+          email: form.email,
           message: form.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY, //  Public Key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
-
       .then(() => {
         setLoading(false);
-        setConfirmation("Thank you! I will get back to you as soon as possible.");
-
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
+        setConfirmation("Thank you! I will get back to you soon.");
+        setForm({ name: "", email: "", message: "" });
       })
       .catch((error) => {
         setLoading(false);
         console.error(error);
-        setConfirmation("Something went wrong. Please try again. :/");
+        setConfirmation("Something went wrong. Please try again.");
       });
   };
 
   return (
-    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
-      <motion.div variants={slideIn("left", "tween", 0.2, 1)} className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact Me</h3>
+    <div className="xl:mt-12 flex flex-col gap-10 overflow-hidden">
+      {/* Top Section: Form and Earth Canvas */}
+      <div className="flex xl:flex-row flex-col-reverse gap-10">
+        <motion.div variants={slideIn("left", "tween", 0.2, 1)} className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
+          <p className={styles.sectionSubText}>Get in touch</p>
+          <h3 className={styles.sectionHeadText}>Contact Me</h3>
 
-        <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
-          <InputField
-            label="Your Name"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            placeholder="Insert Your name here..."
-            type="text"
-          />
-          {nameError && <span className="text-red-500">{nameError}</span>}
+          <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
+            <InputField
+              label="Your Name"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Insert Your name here..."
+              type="text"
+            />
+            {nameError && <span className="text-red-500">{nameError}</span>}
 
-          <InputField
-            label="Email Address"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="What's your email address?"
-            type="email"
-          />
-          {emailError && <span className="text-red-500">{emailError}</span>}
+            <InputField
+              label="Email Address"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="What's your email address?"
+              type="email"
+            />
+            {emailError && <span className="text-red-500">{emailError}</span>}
 
-          <InputField
-            label="Your Message"
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            placeholder="What you want to say...?"
-            type="text"
-          />
+            <InputField
+              label="Your Message"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="What you want to say...?"
+              type="text"
+            />
 
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-          {confirmation && <p className="text-green-500">{confirmation}</p>}
-        </form>
-      </motion.div>
+            <button
+              type="submit"
+              className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+            {confirmation && <p className="text-green-500 mt-2">{confirmation}</p>}
+          </form>
+        </motion.div>
 
-      <motion.div variants={slideIn("right", "tween", 0.2, 1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-        <EarthCanvas />
+        <motion.div variants={slideIn("right", "tween", 0.2, 1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+          <EarthCanvas />
+        </motion.div>
+      </div>
+
+      {/* Specific Map: Christ the King College */}
+      <motion.div
+        variants={slideIn("up", "tween", 0.3, 1)}
+        className="w-full h-[450px] rounded-2xl overflow-hidden border-4 border-[#915EFF] mt-10"
+      >
+        <iframe
+          title="Christ the King College Gingoog"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.5137351631584!2d125.09459367501538!3d8.831514791222165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32ff3be0daf1c1c1%3A0xda15a15f4306db12!2sChrist%20the%20King%20College!5e0!3m2!1sen!2sph!4v1707085000000!5m2!1sen!2sph"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </motion.div>
     </div>
   );
