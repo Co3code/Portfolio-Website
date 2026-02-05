@@ -123,7 +123,10 @@
   border-radius: 8px;
   outline: none;
   font-weight: 600;
-  placeholder-color: #999; /* Placeholder text color */
+}
+.input::placeholder {
+  color: #999; /* placeholder text color */
+  font-style: italic; /* optional */
 }
 
 .input-error {

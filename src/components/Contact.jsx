@@ -141,7 +141,7 @@ const Contact = () => {
       {/* Location Section */}
       <motion.div variants={slideIn("up", "tween", 0.3, 1)} className="w-full mt-12">
         <div className="bg-black-100 rounded-2xl p-6 border border-[#915EFF]/40 shadow-lg">
-          <h3 className="text-white text-2xl font-bold mb-2">📍 My Location</h3>
+          <h3 className="text-white text-2xl font-bold mb-2"> My Location</h3>
           <p className="text-secondary mb-4">Christ the King College, Gingoog City</p>
 
           <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-inner border border-white/10">
